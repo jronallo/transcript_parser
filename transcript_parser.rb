@@ -6,6 +6,7 @@
 # Does not serialize back into WebVTT though.
 
 require 'webvtt'
+require 'chronic_duration'
 require 'pp'
 require 'pry'
 
@@ -13,7 +14,7 @@ filepath = ARGV[0]
 file = File.read(filepath)
 
 first_cue = Webvtt::Cue.new
-first_cue.start = '00:00:00'
+first_cue.start = '0'
 cues = [first_cue]
 
 interview = file.match(/START OF INTERVIEW(.*)END OF INTERVIEW/m)[1]
@@ -25,10 +26,10 @@ interview_lines.with_index do |line, index|
   if !line.chomp.empty?
     timestamp_match = line.match(/\[\[(.*)\]\]/)
     if timestamp_match
-      cues.last.end = timestamp_match[1]
+      cues.last.end = ChronicDuration.parse(timestamp_match[1]) - 1
       if interview_lines.count != index + 1
         cues << Webvtt::Cue.new
-        cues.last.start = timestamp_match[1]
+        cues.last.start = ChronicDuration.parse(timestamp_match[1])
       end
     else
       cues.last.text ||= ''
