@@ -1,0 +1,37 @@
+TRANSCRIPT: Jane Quest
+
+Interviewee: Jane Quest
+
+Interviewer: John Public
+
+Interview Date: September 20, 2012
+
+Location: Raleigh, North Carolina
+
+Length: One audio file, approximately 84 minutes
+
+START OF INTERVIEW
+
+John Public: This is something the first speaker says.
+
+Jane Quest: This is something the second speaker says.
+
+[[03:00]]
+
+JP: This is something the first speaker says.
+
+JQ: This is something the second speaker says.
+
+[[06:00]]
+
+JQ: This is something the second speaker says.
+
+JP: This is something the first speaker says at the end.
+
+[[08:00]]
+
+END OF INTERVIEW
+
+Transcriber: Transcriber's Name
+
+Date: October 16, 2013
